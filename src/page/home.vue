@@ -54,7 +54,7 @@ export default {
         width: 100%;  
         height: 25px;  
         border-radius: 125px/10px;  
-        box-shadow: 0 0 8px rgb(240, 240, 240); 
+        box-shadow: 0 0 8px rgb(49, 42, 72); 
     }
 }
 .hotlist-container {

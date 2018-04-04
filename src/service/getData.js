@@ -17,3 +17,6 @@ export const comingList = () => axios.get(API_CONFIG.coming)
 
 // 正在热映
 export const hotList = () => axios.get(API_CONFIG.theater)
+
+//tog250榜
+export const top250List = () => axios.get(API_CONFIG.top)

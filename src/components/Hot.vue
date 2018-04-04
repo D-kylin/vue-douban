@@ -25,10 +25,7 @@ export default {
 					slidesPerView: 3,
 					spaceBetween: 0,
 					freeMode: false,
-					autoplay: {
-						delay: 20000,
-						disableOnInteraction: false
-					}
+                    autoplay: false
 			})
 	}
 }

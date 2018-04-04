@@ -17,19 +17,15 @@ import 'swiper/dist/css/swiper.css'
 export default {
 	name: 'list',
 	computed: mapState({
-		// top: state => state.top,
 		comingList: state => state.comingList
 	}),
 	mounted: function () {
 		this.$store.dispatch('LOAD_COMING_LIST')
 		new Swiper('#swiper-container2', {
-					slidesPerView: 3,
-					spaceBetween: 0,
-					freeMode: false,
-					autoplay: {
-						delay: 20000,
-						disableOnInteraction: false
-					}
+                slidesPerView: 3,
+                spaceBetween: 0,
+                freeMode: false,
+                autoplay: false
 			})
 	}
 }

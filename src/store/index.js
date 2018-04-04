@@ -8,7 +8,8 @@ Vue.use(Vuex)
 const state = {
     topList: [],
     comingList: [],
-    hotList: []
+    hotList: [],
+    top250List: []
 }
 
 const mutations = {
@@ -20,6 +21,9 @@ const mutations = {
     },
     SET_HOT_LIST: (state, res) => {
         state.hotList = res
+    },
+    SET_TOP250_LIST: (state, res) => {
+        state.top250List = res
     }
 }
 

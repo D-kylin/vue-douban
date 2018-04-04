@@ -12,6 +12,9 @@ export default {
   name: 'App',
   components: {
       MyTab
+  },
+  beforeCreate() {
+      this.$store.dispatch('LOAD_TOP250_LIST')
   }
 }
 </script>
