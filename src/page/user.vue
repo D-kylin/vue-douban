@@ -2,7 +2,7 @@
   <div class="user-info">
       <img src="../assets/logo.png" alt="">
       <blockquote>
-          几分钟光影体验生活，<br />
+          几分钟光影体味生活，<br />
           一段故事温暖人心。
       </blockquote>
         <div class="signin">

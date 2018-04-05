@@ -18,7 +18,6 @@
             </div>
             <div class="mark"></div>
         </div>
-      </div>
   </div>
 </template>
 <script>

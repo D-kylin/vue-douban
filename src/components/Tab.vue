@@ -4,7 +4,7 @@
             <router-link to="/" tag="div">
                 <span>主页</span>
             </router-link>
-            <router-link to="/" tag="div">
+            <router-link to="/moive" tag="div">
                 <span>电影推荐</span>
             </router-link>
             <router-link to="/top250" tag="div">

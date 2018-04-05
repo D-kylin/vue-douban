@@ -1,7 +1,7 @@
 <template>
 	<div class="swiper-container" id="swiper-container1">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide" v-for="(item, index) in topList" :key="index">
+			<div class="swiper-slide" v-for="(item, index) in topList" :key="index" @click="selectItem(item)">
                 <div class="swiper-slide-title">{{item.data.res.subject.title}}</div>
 				<img :src="item.data.res.payload['background_img']" alt="">
 			</div>
@@ -13,12 +13,25 @@
 
 <script>
 import Swiper from 'swiper'
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 import 'swiper/dist/css/swiper.css'
 export default {
 	computed: mapState({
 		topList: state => state.topList
-	}),
+    }),
+    methods: {
+        /* 切换路由并跳转到特定电影详情页 */
+        selectItem(item) {
+            this.$router.push({
+                path: `/moive/${item.data.res.subject.id}`
+            })
+            this.setMovie(item)
+            console.log(item.data.res.subject)
+        },
+        ...mapMutations({
+            setMovie: 'SET_MOVIE_DETIAL'
+        })
+    },
 	mounted: function () {
         this.$store.dispatch('LOAD_2017_BANGDAN')
 		var myswiper = new Swiper('#swiper-container1', {
