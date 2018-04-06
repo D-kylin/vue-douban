@@ -5,6 +5,8 @@ import Home from 'src/page/home'
 import Top250 from 'src/page/top250'
 import UserInfo from 'src/page/user'
 import MyMovie from 'src/page/movie'
+import MovieDetial from 'src/page/subject'
+import MovieDetialFromList from 'src/page/subjectFromList'
 
 Vue.use(Router)
 
@@ -29,6 +31,16 @@ export default new Router({
         path: '/moive',
         name: 'Moive',
         component: MyMovie
+    },
+    {
+        path: '/moive/:id',
+        name: 'MovieDetial',
+        component: MovieDetial
+    },
+    {
+        path: '/moive_2/:id',
+        name: 'MovieDetialFromList',
+        component: MovieDetialFromList
     }
   ]
 })

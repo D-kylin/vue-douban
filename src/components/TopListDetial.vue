@@ -1,9 +1,9 @@
 <template>
   <div class = "top-list-detial">
       <header>Top250榜单推荐</header>
-        <div v-for="(item, index) in top250datas" :key="index" class="detial-cell"> 
+        <div v-for="(item, index) in top250datas" :key="index" class="detial-cell" > 
             <div class="item-container">
-                <div class="movice-img">
+                <div class="movice-img" @click="selectItem(item)">
                     <img :src="item.images.small" :alt="item['original_title']">
                 </div>
                 <div class="movice-info">
@@ -21,13 +21,26 @@
   </div>
 </template>
 <script>
+import { mapMutations } from 'vuex'
 export default {
     name: 'top250',
     props: ['top250datas'],
     data() {
         return {
-
         }
+    },
+    methods: {
+        selectItem(item) {
+            this.$router.push({
+                path: `/moive_2/${item.id}`
+            })
+            this.setMovie(item)
+            this.$store.dispatch('LOAD_SUBJECT', item.id)
+            console.log(item.id)
+            },
+            ...mapMutations({
+                setMovie: 'SET_MOVIE_DETIAL'
+            })
     }
 }
 </script>

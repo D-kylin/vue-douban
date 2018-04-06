@@ -26,6 +26,7 @@ export default {
                 path: `/moive/${item.data.res.subject.id}`
             })
             this.setMovie(item)
+            this.$store.dispatch('LOAD_SUBJECT', item.data.res.subject.id)
             console.log(item.data.res.subject)
         },
         ...mapMutations({
@@ -36,16 +37,16 @@ export default {
         this.$store.dispatch('LOAD_2017_BANGDAN')
 		var myswiper = new Swiper('#swiper-container1', {
 			slidesPerView: 1,
-				spaceBetween: 0,
-                freeMode: false,
-                loop: true,
-				pagination: {
-					el: '#swiper-pagination1'
-				},
-				autoplay: {
-					delay: 5000,
-					disableOnInteraction: false
-				}
+            spaceBetween: 0,
+            freeMode: false,
+            loop: true,
+            pagination: {
+                el: '#swiper-pagination1'
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            }
         })
   }
 }
@@ -53,7 +54,7 @@ export default {
 <style lang="scss" scoped>
 	#swiper-container1 {
 		width: 100%;
-        height: 200px;
+        height: 220px;
         position: relative;
         img {
             width: 100%;

@@ -7,6 +7,9 @@ export const widget3 = () => axios.get('https://movie.douban.com/ithil_j/activit
 export const widget4 = () => axios.get('https://movie.douban.com/ithil_j/activity/movie_annual2017/widget/4')
 export const widget5 = () => axios.get('https://movie.douban.com/ithil_j/activity/movie_annual2017/widget/5')
 
+Promise.all(Array(5).fill(0).map((_,i) => i+1).map(it => 'https://movie.douban.com/ithil_j/activity/movie_annual2017/widget' + it)
+    .map(axios.get.bind(axios)))
+
 //年度榜单
 export const anualList = () => {
     return Promise.all([widget(), widget2(), widget3(), widget4(), widget5()])
@@ -20,3 +23,6 @@ export const hotList = () => axios.get(API_CONFIG.theater)
 
 //tog250榜
 export const top250List = () => axios.get(API_CONFIG.top)
+
+//电影条目信息
+export const subjectData = (id) => axios.get(API_CONFIG.subject + id)

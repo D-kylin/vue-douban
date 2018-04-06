@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 import actions from 'src/store/action'
+// import getters from 'src/store/getters'
 
 import TOPLISTCOMMENT from 'src/store/toplistcomment'
 
@@ -10,6 +11,7 @@ Vue.use(Vuex)
 const state = {
     topList: [],
     topListComment: TOPLISTCOMMENT,
+    subject: [],
     comingList: [],
     hotList: [],
     top250List: [],
@@ -31,6 +33,9 @@ const mutations = {
     },
     SET_MOVIE_DETIAL: (state, currentMovie) => {
         state.movieDetial = currentMovie
+    },
+    SET_SUBJECT: (state, data) => {
+        state.subject = data
     }
 }
 

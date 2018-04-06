@@ -1,6 +1,6 @@
 const API_CONFIG = {
     // 电影条目信息 GET
-    subject: 'http://api.douban.com/v2/movie/subject/:id',
+    subject: 'http://api.douban.com/v2/movie/subject/',
     // 影人条目信息 GET
     celebrity: 'http://api.douban.com/v2/movie/celebrity/:id',
     // 电影条目搜索 GET

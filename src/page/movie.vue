@@ -70,14 +70,21 @@ export default {
 	line-height: 25px;
 	color: rgb(170, 170, 170);
 }
+.rating {
+	margin-right: 10px;
+}
 .moive-container {
 	margin-bottom: 50px;
+}
+.comments {
+	margin: 0 10px;
 }
 .moive-item {
 	width: 100%;
 	.moive-item-img {
 		position: relative;
 		img {
+			display: block;
 			width: 100%;
 			height: 220px;
 		}
@@ -90,7 +97,7 @@ export default {
 		}
 	}
 	.moive-item-comments {
-		margin: 0 10px;
+		// margin: 0 10px;
 		.fl {
 			float: left;
 		}
@@ -102,13 +109,14 @@ export default {
 .moive-item-subject {
 	position: sticky;
 	top: 0;
+	margin-bottom: 5px;
 	overflow: hidden;
 	background: rgb(28, 15, 45);
 }
 .comments {
 	text-align: left;
 	.comment-cell {
-		padding: 5px 0;
+		padding-bottom: 10px;
 		display: flex;
 		.avatar {
 			flex: 1;
