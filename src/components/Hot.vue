@@ -18,15 +18,17 @@ export default {
 	name: 'list',
 	computed: mapState({
 		hotList: state => state.hotList
-	}),
+    }),
+    created: function () {
+        this.$store.dispatch('LOAD_HOT_LIST')
+    },
 	mounted: function () {
-		this.$store.dispatch('LOAD_HOT_LIST')
-		new Swiper('#swiper-container3', {
-					slidesPerView: 3,
-					spaceBetween: 0,
-					freeMode: false,
+        var mySwiper = new Swiper('#swiper-container3', {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                    freeMode: false,
                     autoplay: false
-			})
+            })
 	},
     methods: {
         selectItem(item) {
@@ -53,4 +55,8 @@ export default {
             height: 80%;
         }
 	}
+    .toBegin {
+        transform: translate3d(-1277px, 0px, 0px);
+        transition-duration: 0ms;
+    }
 </style>

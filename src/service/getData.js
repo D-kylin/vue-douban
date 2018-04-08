@@ -7,8 +7,6 @@ export const widget3 = () => axios.get('https://movie.douban.com/ithil_j/activit
 export const widget4 = () => axios.get('https://movie.douban.com/ithil_j/activity/movie_annual2017/widget/4')
 export const widget5 = () => axios.get('https://movie.douban.com/ithil_j/activity/movie_annual2017/widget/5')
 
-Promise.all(Array(5).fill(0).map((_,i) => i+1).map(it => 'https://movie.douban.com/ithil_j/activity/movie_annual2017/widget' + it)
-    .map(axios.get.bind(axios)))
 
 //年度榜单
 export const anualList = () => {

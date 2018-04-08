@@ -12,10 +12,12 @@
   "dependencies": {
     "axios": "^0.18.0",
     "dns": "^0.2.2",
+    "fastclick": "^1.0.6",
     "fetch": "^1.1.0",
     "swiper": "^4.2.2",
     "vue": "^2.5.2",
     "vue-awesome-swiper": "^3.1.3",
+    "vue-lazyload": "^1.2.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },

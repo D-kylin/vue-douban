@@ -18,9 +18,11 @@ export default {
 	name: 'list',
 	computed: mapState({
 		comingList: state => state.comingList
-	}),
-	mounted: function () {
+    }),
+    beforeCreate: function () {
 		this.$store.dispatch('LOAD_COMING_LIST')
+    },
+	mounted: function () {
 		new Swiper('#swiper-container2', {
                 slidesPerView: 3,
                 spaceBetween: 0,

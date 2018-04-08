@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import Home from 'src/page/home'
 import Top250 from 'src/page/top250'
 import UserInfo from 'src/page/user'

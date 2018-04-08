@@ -3,36 +3,37 @@
 		<div v-for="(item, index) in movieList" :key="index" class="moive-item">
 			<div class="moive-item-img">
 				<img :src="item.data.res.payload['background_img']" alt="">
-				<!-- <div class="title">{{item.data.res.payload.title}}</div> -->
 				<div class="toggle" @click="changeCommentVisiable(index)">查看电影短评</div>
 			</div>
-			<div class="moive-item-comments" v-if="isCommentVisiable === index">
-				<div class="moive-item-subject">
-					<h2 class="title fl">
-						《{{item.data.res.subject.title}}》
-					</h2>
-					<div class="rating fr">
-						豆瓣评分: {{item.data.res.subject.rating}}
-					</div>
-				</div>
-				<div class="comments clearfix">
-					<div v-for="(content, index) in commentLists[item.data.res.subject.id]" :key="index">
-						<div class="comment-cell">
-							<div class="avatar">
-								<img :src="content.avatar" :alt="content.id">
-							</div>
-							<div class="comment">
-								<h3>
-									<strong>{{content.id}}</strong>
-									<span class="fr">{{content.time}}</span>
-								</h3>
-								<p>{{content.comment}}</p>
-							</div>
-						</div>
-						<div class="mark"></div>
-					</div>
-				</div>
-			</div>
+            <transition name="fade">
+                <div class="moive-item-comments" v-if="isCommentVisiable === index">
+                    <div class="moive-item-subject">
+                        <h2 class="title fl">
+                            《{{item.data.res.subject.title}}》
+                        </h2>
+                        <div class="rating fr">
+                            豆瓣评分: {{item.data.res.subject.rating}}
+                        </div>
+                    </div>
+                    <div class="comments clearfix">
+                        <div v-for="(content, index) in commentLists[item.data.res.subject.id]" :key="index">
+                            <div class="comment-cell">
+                                <div class="avatar">
+                                    <img :src="content.avatar" :alt="content.id">
+                                </div>
+                                <div class="comment">
+                                    <h3>
+                                        <strong>{{content.id}}</strong>
+                                        <span class="fr">{{content.time}}</span>
+                                    </h3>
+                                    <p>{{content.comment}}</p>
+                                </div>
+                            </div>
+                            <div class="mark"></div>
+                        </div>
+                    </div>
+                </div>
+            </transition>
 		</div>
 	</div>
 </template>
@@ -146,7 +147,12 @@ export default {
 					box-shadow: 0 0 8px rgb(49, 42, 72); 
 			}
 	}
-
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
 </style>
 
 

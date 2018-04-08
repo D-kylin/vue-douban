@@ -4,7 +4,9 @@
         <div class="hotlist-container">
             <div class="list-header">
                 <div class="list-title fl">正在热映</div>
-                <div class="check-more fr">查看更多</div>
+                <router-link to="/moive">
+                    <div class="check-more fr">查看更多</div>
+                </router-link>
             </div>
             <hot-movice-list />
         </div>
@@ -12,7 +14,9 @@
         <div class="newlist-container">
             <div class="list-header">
                 <div class="list-title fl">新榜上线</div>
-                <div class="check-more fr">查看更多</div>
+                <router-link to="/top250">
+                    <div class="check-more fr">查看更多</div>
+                </router-link>
             </div>
 		    <new-movice-list />	
         </div>

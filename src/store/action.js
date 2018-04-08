@@ -16,7 +16,7 @@ export default {
     async LOAD_HOT_LIST({ commit }) {
         let res = await hotList()
         commit('SET_HOT_LIST', res.data.subjects)
-        console.log(res.data.subjects)
+        // console.log(res.data.subjects)
     },
 
     async LOAD_TOP250_LIST({ commit }) {
@@ -27,7 +27,7 @@ export default {
 
     async LOAD_SUBJECT({ commit }, id) {
         let res = await subjectData(id)
-        console.log(res.data)
+        // console.log(res.data)
         commit('SET_SUBJECT', res.data)
     }
 }
