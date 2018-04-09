@@ -42,8 +42,5 @@ npm start
 # License
 
 #### 如果您喜欢这个软件不妨点个star，也欢迎fork。
-<<<<<<< HEAD
 #### 个人邮箱：2017kylin@gmail.com
-=======
-#### 个人邮箱：2017kylin@gmail.com
->>>>>>> 26b4b3b9adf6e628c183d5d60af96515bbf8ba0d
+
